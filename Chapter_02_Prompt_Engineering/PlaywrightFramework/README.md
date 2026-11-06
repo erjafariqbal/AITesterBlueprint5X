@@ -57,4 +57,4 @@ npx allure open allure-report
 - Valid-login tests fail until real credentials are set in `qa.env`.
 
 ## CI
-The root workflow `.github/workflows/playwright.yml` runs this framework and `PlaywrightFramework2` as two jobs. This one uses the repository secrets `VWO_USER_USERNAME` and `VWO_USER_PASSWORD` (and optionally `VWO_BASE_URL`) and uploads `allure-results`.
+The root workflow `.github/workflows/playwright.yml` runs this framework. It uses the repository secrets `VWO_USER_USERNAME` and `VWO_USER_PASSWORD` (and optionally `VWO_BASE_URL`) and uploads `allure-results`.

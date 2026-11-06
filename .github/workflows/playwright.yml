@@ -41,34 +41,3 @@ jobs:
           name: allure-results-playwright-framework
           path: Chapter_02_Prompt_Engineering/PlaywrightFramework/allure-results/
           retention-days: 30
-
-  playwright-framework-2:
-    name: PlaywrightFramework2 (e-commerce)
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-    defaults:
-      run:
-        working-directory: Chapter_02_Prompt_Engineering/PlaywrightFramework2
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          cache: npm
-          cache-dependency-path: Chapter_02_Prompt_Engineering/PlaywrightFramework2/package-lock.json
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - name: Create qa.env
-        run: |
-          {
-            echo "BASE_URL=\"${{ secrets.BASE_URL }}\""
-            echo "USER_EMAIL=${{ secrets.USER_EMAIL }}"
-            echo "USER_PASSWORD=${{ secrets.USER_PASSWORD }}"
-          } > testdata/qa.env
-      - run: npx playwright test --grep-invert @creates-account
-      - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
-        with:
-          name: allure-results-playwright-framework-2
-          path: Chapter_02_Prompt_Engineering/PlaywrightFramework2/allure-results/
-          retention-days: 30
