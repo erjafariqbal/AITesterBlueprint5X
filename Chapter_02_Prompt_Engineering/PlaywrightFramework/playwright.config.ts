@@ -14,7 +14,9 @@ export default defineConfig({
     workers: process.env.CI ? 2 : undefined,
     timeout: 60_000,
     expect: { timeout: 15_000 },
-    reporter: [['list'], ['allure-playwright', { resultsDir: 'allure-results' }]],
+    reporter: process.env.CI
+        ? [['list'], ['github'], ['allure-playwright', { resultsDir: 'allure-results' }]]
+        : [['list'], ['allure-playwright', { resultsDir: 'allure-results' }]],
     use: {
         actionTimeout: 15_000,
         navigationTimeout: 30_000,

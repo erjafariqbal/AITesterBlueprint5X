@@ -3,6 +3,8 @@ import { LoginPage } from '../pages/LoginPage';
 
 let lp: LoginPage;
 
+test.skip(!process.env.USER_USERNAME || !process.env.USER_PASSWORD, 'USER_USERNAME and USER_PASSWORD are not set');
+
 test.beforeEach(async ({ page }) => {
     lp = new LoginPage(page);
     await lp.launchUrl(process.env.BASE_URL!);
