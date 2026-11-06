@@ -1,0 +1,76 @@
+{
+    "routes": {
+        "login": "/auth/login",
+        "forgotPassword": "/auth/password-new",
+        "register": "/auth/register",
+        "dashboard": "/dashboard/dash",
+        "cart": "/dashboard/cart",
+        "orders": "/dashboard/myorders"
+    },
+    "api": {
+        "products": "/product/get-all-products"
+    },
+    "invalidUser": {
+        "malformedEmail": "notanemail",
+        "unknownEmail": "no.such.user.qa@example.com",
+        "wrongPassword": "Wrong@12345",
+        "shortPhone": "12",
+        "shortFirstName": "Qa",
+        "mismatchPassword": "Different@1"
+    },
+    "registration": {
+        "firstName": "Automation",
+        "lastName": "Tester",
+        "phone": "9876543210",
+        "occupation": "Engineer",
+        "gender": "Male"
+    },
+    "messages": {
+        "emailRequired": "*Email is required",
+        "passwordRequired": "*Password is required",
+        "confirmPasswordRequired": "*Confirm Password is required",
+        "registerConfirmPasswordRequired": "Confirm Password is required",
+        "invalidEmail": "*Enter Valid Email",
+        "firstNameRequired": "*First Name is required",
+        "firstNameLength": "*First Name must be 3 or more character long",
+        "phoneRequired": "*Phone Number is required",
+        "phoneLength": "*Phone Number must be 10 digit",
+        "passwordMismatch": "Password and Confirm Password must match with each other.",
+        "incorrectLogin": "Incorrect email or password.",
+        "userNotFound": "User Not found.",
+        "accountCreated": "Account Created Successfully",
+        "logout": "Logout Successfully",
+        "addToCart": "Product Added To Cart",
+        "emptyCart": "No Products in Your Cart !",
+        "invalidCoupon": "* Invalid Coupon",
+        "couponApplied": "* Coupon Applied",
+        "emptyCoupon": "Please Enter Coupon",
+        "missingShipping": "Please Enter Full Shipping Information",
+        "maxProducts": "User can only see maximum 9 products on a page",
+        "orderConfirmation": "Thankyou for the order.",
+        "orderDetails": "Thank you for Shopping With Us"
+    },
+    "filters": {
+        "categories": ["fashion", "electronics", "household"],
+        "subCategories": ["t-shirts", "shirts", "shoes", "mobiles", "laptops"],
+        "searchFor": ["men", "women"],
+        "noMatchSearch": "no-such-product-qa",
+        "belowLowestPrice": "1"
+    },
+    "payment": {
+        "methods": ["Credit Card", "Paypal", "SEPA", "Invoice"],
+        "cardNumber": "4542 9931 9292 2293",
+        "expiryMonth": "12",
+        "expiryYear": "28",
+        "cvv": "123",
+        "nameOnCard": "Qa Tester",
+        "validCoupon": "rahulshettyacademy",
+        "invalidCoupon": "INVALIDCOUPON",
+        "countryQuery": "ind",
+        "country": "India"
+    },
+    "orders": {
+        "columns": ["Order Id", "Product Image", "Name", "Price", "Ordered Date", "View", "Delete"]
+    },
+    "maxProductsPerPage": 9
+}
