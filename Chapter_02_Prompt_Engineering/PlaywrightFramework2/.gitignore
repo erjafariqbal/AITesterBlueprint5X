@@ -1,7 +1,5 @@
 node_modules/
 allure-results/
 allure-report/
-test-results/
-playwright-report/
 auth.json
-*.env
+testdata/qa.env
